@@ -1,0 +1,21 @@
+{
+    "name": "jxy918/swoft-smarty",
+    "description": "smarty view base on swoft",
+    "type": "library",
+    "require": {
+        "smarty/smarty": "^3.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jxy918",
+            "email": "jxy918@163.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "autoload": {
+        "psr-4": {
+            "Swoft\\Smarty\\": "src"
+        }
+    }
+}
