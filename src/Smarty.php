@@ -15,7 +15,7 @@ use Swoft\View\Contract\ViewInterface;
  * @since 1.0
  * @Bean("smarty")
  */
-class Smarty implements ViewInterface
+class Smarty implements SmartyInterface
 {
     /**
      * @var string Default layout file

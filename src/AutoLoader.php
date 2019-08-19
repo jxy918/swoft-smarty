@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Swoft\View;
+namespace Swoft\Smarty;
 
 use Swoft\Helper\ComposerJSON;
 use Swoft\SwoftComponent;
@@ -45,7 +45,7 @@ class AutoLoader extends SwoftComponent
     {
         return [
             'view' => [
-                // 'class'     => Renderer::class,
+                // 'class'     => Smarty::class,
                 'viewsPath' => '@base/resource/views'
             ],
         ];

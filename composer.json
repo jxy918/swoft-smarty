@@ -17,5 +17,16 @@
         "psr-4": {
             "Swoft\\Smarty\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwoftTest\\View\\": "test/case"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit -c phpunit.xml"
     }
 }

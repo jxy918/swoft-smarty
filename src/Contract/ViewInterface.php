@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Swoft\View\Contract;
+namespace Swoft\Smarty\Contract;
 
 /**
- * Class ViewInterface The interface of view
+ * Class SmartyInterface The interface of view
  * @since 1.0
  */
-interface ViewInterface
+interface SmartyInterface
 {
     public const DEFAULT_SUFFIXES = ['php', 'tpl', 'html'];
 
