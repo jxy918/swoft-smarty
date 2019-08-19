@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Swoft\View;
+namespace Swoft\Smarty;
 
 use function in_array;
 use function rtrim;
@@ -13,9 +13,9 @@ use Swoft\View\Contract\ViewInterface;
  * Class Renderer - PHP view scripts renderer
  *
  * @since 1.0
- * @Bean("view")
+ * @Bean("smarty")
  */
-class Renderer implements ViewInterface
+class Smarty implements ViewInterface
 {
     /**
      * @var string Default layout file
