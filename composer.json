@@ -2,7 +2,7 @@
     "name": "jxy918/swoft-smarty",
     "description": "smarty view base on swoft",
     "type": "library",
-    "version": "v1.0.1",
+    "version": "v1.0.2",
     "require": {
         "smarty/smarty": "^3.1"
     },
