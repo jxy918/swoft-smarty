@@ -14,6 +14,23 @@ composer require jxy918/swoft-smarty
 
 ```
 
+- smarty default config
+
+```
+'smarty' => [
+    'debugging'=>true,
+    'caching'=>true,
+    'cacheLifetime'=>120,
+    'leftDelimiter' => '<!--{',
+    'rightDelimiter' => '}-->',
+    'templateDir' => '@base/resource/template',
+    'compileDir' => '@base/runtime/template_c',
+    'cacheDir' => '@base/runtime/cache'
+]
+
+
+```
+
 - use in controller
 
 
