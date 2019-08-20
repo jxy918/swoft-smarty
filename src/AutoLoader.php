@@ -44,9 +44,15 @@ class AutoLoader extends SwoftComponent
     public function beans(): array
     {
         return [
-            'view' => [
-                // 'class'     => Smarty::class,
-                'viewsPath' => '@base/resource/views'
+            'smarty' => [
+                'debugging'=>true,
+                'caching'=>true,
+                'cacheLifetime'=>120,
+                'leftDelimiter' => '<!--{',
+                'rightDelimiter' => '}-->',
+                'templateDir' => '@base/resource/template',
+                'compileDir' => '@base/runtime/template_c',
+                'cacheDir' => '@base/runtime/cache'
             ],
         ];
     }

@@ -2,7 +2,7 @@
     "name": "jxy918/swoft-smarty",
     "description": "smarty view base on swoft",
     "type": "library",
-    "version": "v2.0.0",
+    "version": "v2.0.1",
     "keywords": [
         "php",
         "swoole",
