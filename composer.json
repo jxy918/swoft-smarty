@@ -20,7 +20,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SwoftTest\\View\\": "test/case"
+            "SwoftTest\\Smarty\\": "test/unit"
         }
     },
     "require-dev": {
@@ -29,7 +29,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packagist.laravel-china.org"
+            "url": "https://packagist.phpcomposer.com"
         }
     ],
     "scripts": {

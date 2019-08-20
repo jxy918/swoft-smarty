@@ -1,10 +1,10 @@
 <?php
 
-namespace Swoft\View\Test\Cases;
+namespace Swoft\Smarty\Test\Cases;
 
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
-use Swoft\View\Renderer;
+use Swoft\Samrty\Smarty;
 use function dirname;
 
 /**

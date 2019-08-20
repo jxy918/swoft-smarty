@@ -7,10 +7,10 @@ use function rtrim;
 use Swoft\Bean\Annotation\Mapping\Bean;
 use Swoft\Stdlib\Helper\FileHelper;
 use Swoft\Stdlib\Helper\ObjectHelper;
-use Swoft\View\Contract\ViewInterface;
+use Swoft\Smarty\Contract\SmartyInterface;
 
 /**
- * Class Renderer - PHP view scripts renderer
+ * Class Smarty - PHP view scripts Smarty
  *
  * @since 1.0
  * @Bean("smarty")
