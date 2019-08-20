@@ -19,14 +19,9 @@ use Swoft\Smarty\Contract\TplInterface;
 class Tpl implements TplInterface
 {
     /**
-     * @var string Default layout file
-     */
-    protected $layout = '';
-
-    /**
      * @var string Default view suffix.
      */
-    protected $suffix = 'php';
+    protected $suffix = 'html';
 
     /**
      * @var array Allowed suffix list. It use auto add suffix.
@@ -44,13 +39,6 @@ class Tpl implements TplInterface
     protected $attributes = [];
 
     /**
-     * In layout file '...<body>{_CONTENT_}</body>...'
-     *
-     * @var string
-     */
-    protected $placeholder = '{_CONTENT_}';
-
-    /**
      * 出示化smarty对象
      * @var null
      */
@@ -63,11 +51,8 @@ class Tpl implements TplInterface
     public function __construct(array $config = [])
     {
         $this->suffixes = self::DEFAULT_SUFFIXES;
-
         ObjectHelper::init($this, $config);
-
-        $this->setSmarty();
-
+        $this->initSmarty();
     }
 
     /**
@@ -83,12 +68,6 @@ class Tpl implements TplInterface
     public function display(string $view, array $data = [], $layout = null): string
     {
         $output = $this->fetch($view, $data);
-
-        // False - will disable use layout file
-        if ($layout === false) {
-            return $output;
-        }
-
         return $this->renderContent($output, $data, $layout);
     }
 
@@ -156,18 +135,7 @@ class Tpl implements TplInterface
         if (!is_file($file)) {
             throw new \RuntimeException("cannot render '$view' because the view file does not exist. File: $file");
         }
-
-        /*
-        foreach ($data as $k=>$val) {
-            if (in_array($k, array_keys($this->attributes))) {
-                throw new \InvalidArgumentException(
-                    "Duplicate key found in data and renderer attributes. " . $k
-                );
-            }
-        }
-        */
         $data = \array_merge($this->attributes, $data);
-
         try {
             \ob_start();
             $this->protectedIncludeScope($file, $data);
@@ -270,42 +238,6 @@ class Tpl implements TplInterface
     }
 
     /**
-     * Get the layout file
-     *
-     * @return string
-     */
-    public function getLayout(): string
-    {
-        return $this->layout;
-    }
-
-    /**
-     * Set the layout file
-     *
-     * @param string $layout
-     */
-    public function setLayout(string $layout): void
-    {
-        $this->layout = rtrim($layout, '/\\');
-    }
-
-    /**
-     * @return string
-     */
-    public function getPlaceholder(): string
-    {
-        return $this->placeholder;
-    }
-
-    /**
-     * @param string $placeholder
-     */
-    public function setPlaceholder(string $placeholder): void
-    {
-        $this->placeholder = $placeholder;
-    }
-
-    /**
      * @param string $view
      * @return string
      */
@@ -343,9 +275,9 @@ class Tpl implements TplInterface
     }
 
     /**
-     * 设置smarty
+     * 初始化smarty对象
      */
-    protected function setSmarty() {
+    protected function initSmarty() {
         $this->smarty = new \Smarty();
         $this->smarty->debugging = true;
         $this->smarty->caching = true;
@@ -353,13 +285,5 @@ class Tpl implements TplInterface
         $this->smarty->left_delimiter = '<!--{';
         $this->smarty->right_delimiter = '}-->';
         $this->smarty->addTemplateDir('@base/resource/views');
-    }
-
-    /**
-     * 获取smarty对象
-     * @return null|\Smarty
-     */
-    public function getSmarty() {
-        return $this->smarty;
     }
 }
