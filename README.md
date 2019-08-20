@@ -1,4 +1,4 @@
-#swoft-smarty
+# swoft-smarty
 
 smarty template view base on swoft.
 
@@ -37,7 +37,7 @@ composer require jxy918/swoft-smarty
 - app/Http/Controlle/SmartyController.php
 - resource/template/smarty.html
 
-`app/Http/Controlle/SmartyController.php
+app/Http/Controlle/SmartyController.php
 
 ```
 <?php declare(strict_types=1);
@@ -82,7 +82,7 @@ class SmartyController
 
 ```
 
-`resource/template/smarty.html
+resource/template/smarty.html
 
 ```
 <!doctype html>
