@@ -3,10 +3,10 @@
 namespace Swoft\Smarty\Contract;
 
 /**
- * Class SmartyInterface The interface of view
+ * Class TplInterface The interface of view
  * @since 1.0
  */
-interface SmartyInterface
+interface TplInterface
 {
     public const DEFAULT_SUFFIXES = ['php', 'tpl', 'html'];
 
@@ -17,12 +17,12 @@ interface SmartyInterface
      *
      * @return string
      */
-    public function render(string $view, array $data = [], $layout = null): string;
+    public function display(string $view, array $data = [], $layout = null): string;
 
     /**
      * @param string $view
      * @param array  $data
      * @return string
      */
-    public function renderPartial(string $view, array $data = []): string;
+    public function fetch(string $view, array $data = []): string;
 }

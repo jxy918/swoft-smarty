@@ -1,16 +1,16 @@
 <?php
 
-namespace Swoft\Smarty\Test\Cases;
+namespace SwoftTest\Smarty\Test\Cases;
 
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
-use Swoft\Samrty\Smarty;
+use Swoft\Smarty\Tpl;
 use function dirname;
 
 /**
- * Class RendererTest
+ * Class TplTest
  */
-class RendererTest extends TestCase
+class TplTest extends TestCase
 {
     public function testRenderer(): void
     {

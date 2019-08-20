@@ -1,3 +1,3 @@
 ###swoft-smarty###
 
-smarty view base on swoft.
+smarty template view base on swoft.

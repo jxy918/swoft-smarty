@@ -2,20 +2,21 @@
 
 namespace Swoft\Smarty;
 
+use Couchbase\ViewQueryEncodable;
 use function in_array;
 use function rtrim;
 use Swoft\Bean\Annotation\Mapping\Bean;
 use Swoft\Stdlib\Helper\FileHelper;
 use Swoft\Stdlib\Helper\ObjectHelper;
-use Swoft\Smarty\Contract\SmartyInterface;
+use Swoft\Smarty\Contract\TplInterface;
 
 /**
  * Class Smarty - PHP view scripts Smarty
  *
  * @since 1.0
- * @Bean("smarty")
+ * @Bean("tpl")
  */
-class Smarty implements SmartyInterface
+class Tpl implements TplInterface
 {
     /**
      * @var string Default layout file
@@ -65,8 +66,6 @@ class Smarty implements SmartyInterface
 
         ObjectHelper::init($this, $config);
 
-        var_dump($config);
-
         $this->setSmarty();
 
     }
@@ -81,7 +80,7 @@ class Smarty implements SmartyInterface
      * @return string
      * @throws \Throwable
      */
-    public function render(string $view, array $data = [], $layout = null): string
+    public function display(string $view, array $data = [], $layout = null): string
     {
         $output = $this->fetch($view, $data);
 
@@ -91,17 +90,6 @@ class Smarty implements SmartyInterface
         }
 
         return $this->renderContent($output, $data, $layout);
-    }
-
-    /**
-     * @param string $view
-     * @param array  $data
-     * @return string
-     * @throws \Throwable
-     */
-    public function renderPartial(string $view, array $data = []): string
-    {
-        return $this->fetch($view, $data);
     }
 
     /**
