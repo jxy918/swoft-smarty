@@ -2,7 +2,7 @@
 
 smarty template view base on swoft.
 
-Swoft Smarty View Component
+Swoft-smarty Component
 
 
 ## Install
