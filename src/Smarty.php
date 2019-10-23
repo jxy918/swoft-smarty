@@ -162,7 +162,7 @@ class Smarty implements SmartyInterface
      */
     public function getDebugging(): bool
     {
-        return $this->debugging ? $this->debugging : true;
+        return $this->debugging;
     }
 
     /**
@@ -182,7 +182,7 @@ class Smarty implements SmartyInterface
      */
     public function getCaching(): bool
     {
-        return $this->caching ? $this->caching : true;
+        return $this->caching;
     }
 
     /**
