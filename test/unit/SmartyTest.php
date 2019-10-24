@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace SwoftTest\Smarty;
 
@@ -13,10 +13,8 @@ class SmartyTest extends TestCase
 {
     public function testSmarty(): void
     {
-
         $r = new Smarty();
         $r->initView();
-
         $this->assertSame(true, $r->getDebugging());
         $r->setDebugging(false);
         $this->assertSame(false, $r->getDebugging());

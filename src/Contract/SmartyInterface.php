@@ -9,7 +9,8 @@ namespace Swoft\Smarty\Contract;
 interface SmartyInterface
 {
     /**
-     * @return object
+     * 初始化smarty对象
+     * @return mixed
      */
-    public function initView(): object;
+    public function initView();
 }

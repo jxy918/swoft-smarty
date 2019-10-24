@@ -2,7 +2,7 @@
     "name": "jxy918/swoft-smarty",
     "description": "smarty view base on swoft",
     "type": "library",
-    "version": "v2.0.1",
+    "version": "v2.0.2",
     "keywords": [
         "php",
         "swoole",
@@ -23,7 +23,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Swoft\\Smarty\\": "src"
+            "Swoft\\Smarty\\": "src/"
         }
     },
     "autoload-dev": {
@@ -36,5 +36,11 @@
     },
     "scripts": {
         "test": "./vendor/bin/phpunit -c phpunit.xml"
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.laravel-china.org"
+        }
+    ],
 }

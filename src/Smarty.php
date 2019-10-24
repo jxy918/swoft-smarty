@@ -68,15 +68,14 @@ class Smarty implements SmartyInterface
     public function __construct(array $config = [])
     {
         ObjectHelper::init($this, $config);
-
         $this->smarty = new \Smarty();
     }
 
     /**
-     * init smarty view
-     * @return object
+     * 初始化smarty对象
+     * @return mixed|null|object|\Smarty
      */
-    public function initView(): object
+    public function initView()
     {
         $this->smarty->debugging = $this->getDebugging();
         $this->smarty->caching = $this->getCaching();
