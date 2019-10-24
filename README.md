@@ -1,8 +1,13 @@
 # swoft-smarty
 
+[![Latest Stable Version](https://img.shields.io/packagist/v/jxy918/swoft-smarty.svg)](https://packagist.org/packages/jxy918/swoft-smarty)
+[![Php Version](https://img.shields.io/badge/php-%3E=7.1-brightgreen.svg?maxAge=2592000)](https://secure.php.net/)
+[![Swoft Doc](https://img.shields.io/badge/docs-passing-green.svg?maxAge=2592000)](https://www.swoft.org/docs)
+[![Swoft License](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](https://github.com/swoft-cloud/swoft/blob/master/LICENSE)
+
 sowft框架smarty模板组件
 
-swoft framework smarty template component .
+smarty template component for swoft.
 
 Swoft-smarty Component
 
@@ -109,7 +114,3 @@ class SmartyController
 </html>
 
 ```
-
-## LICENSE
-
-The Component is open-sourced software licensed under the [Apache license](LICENSE).
