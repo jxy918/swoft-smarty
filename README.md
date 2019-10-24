@@ -7,9 +7,9 @@ swoft framework smarty template component .
 Swoft-smarty Component
 
 
-## Install
+## Install, 安装
 
-- composer command
+- composer install command
 
 ```
 composer require jxy918/swoft-smarty
@@ -17,6 +17,7 @@ composer require jxy918/swoft-smarty
 ```
 
 - smarty default config
+- swoft框架里 smarty 的默认配置如下, 默认不需要添加, 如果想要修改, 可以把下面配置放入到bean.php里面, 进行相应的修改即可
 
 ```
 'smarty' => [
@@ -29,12 +30,9 @@ composer require jxy918/swoft-smarty
     'compileDir' => '@base/runtime/template_c',
     'cacheDir' => '@base/runtime/cache'
 ]
-
-
 ```
 
-
-## Use in Controller
+## Use in Controller, 控制器里使用如下
 
 - app/Http/Controlle/SmartyController.php
 - resource/template/smarty.html
@@ -84,7 +82,7 @@ class SmartyController
 
 ```
 
-resource/template/smarty.html
+模板文件 resource/template/smarty.html
 
 ```
 <!doctype html>
