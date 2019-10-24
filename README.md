@@ -2,7 +2,7 @@
 
 sowft框架smarty模板组件
 
-smarty template view base on swoft.
+swoft framework smarty template component .
 
 Swoft-smarty Component
 
