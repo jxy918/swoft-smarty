@@ -1,5 +1,7 @@
 # swoft-smarty
 
+sowft框架smarty模板组件
+
 smarty template view base on swoft.
 
 Swoft-smarty Component
