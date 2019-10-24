@@ -36,11 +36,5 @@
     },
     "scripts": {
         "test": "./vendor/bin/phpunit -c phpunit.xml"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packagist.laravel-china.org"
-        }
-    ],
+    }
 }
